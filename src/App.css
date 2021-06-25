@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+  background-color: black;
+  height:100%;
+  color:white;
+}
+
+.search-group{
+  transform: translateY(20%);
+}
+
+.search{
+  padding: 1%;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px 0px 0px 5px;
+  width: 50%;
+  height:28px;
+  font-size: medium;
+}
+.search-btn{
+  padding: 1%;
+  position: absolute;
+  background-color: black;
+  border: 1px solid white;
+  color:white;
+  border-radius: 0px 5px 5px 0px;
+}
+.search-btn:hover{
+  background-color: rgba(255, 255,255,0.2);
+}
+.suggest{
+  color:rgb(224, 222, 222);
+  padding:2%;
+  cursor: pointer;
+  text-align: left;
+}
+.suggest:hover{
+  background-color: rgba(255, 255,255,0.2);
+}
+.suggest-list{
+  left: 20%;
+  position: relative;
+  width: 60%;
+  
+  list-style: none;
+  color: white;
+  /* border: 1px solid white; */
+}
