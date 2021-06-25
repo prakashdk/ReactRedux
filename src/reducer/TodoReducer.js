@@ -1,4 +1,3 @@
-import {isEmpty} from './PureFuctions'
 const initialState = {
   text: "",
   todo: [],
@@ -8,13 +7,10 @@ const initialState = {
 function TodoReducer(state = initialState, action) {
   switch (action.type) {
     
-    case "BACK_UP":
-      let todos=JSON.parse(sessionStorage.getItem('todo'))
+    case "persist/REHYDRATE":
 
       return {
-        ...state,
-        todo:isEmpty(todos)?[]:todos.todo,
-        id:isEmpty(todos)?0:todos.id,
+        ...action.payload.todo,
       };
     case "SET_TEXT":
       return {

@@ -1,16 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import InputField from "./InputField";
 import TodoList from "./TodoList";
 import { connect } from "react-redux";
-function TodoApp({ restore, todo,id }) {
-  useEffect(() => restore(), [restore]);
-  useEffect(() => {
-    let backup={
-      id:id,
-      todo:todo,
-    }
-    sessionStorage.setItem('todo',JSON.stringify(backup));
-  }, [todo,id]);
+function TodoApp() {
   return (
     <div>
       <h1>Todo App</h1>
@@ -23,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     ...ownProps,
     todo: state.todo.todo,
-    id:state.todo.id,
+    id: state.todo.id,
   };
 };
 const mapDispatchToProps = (dispatch) => {
